@@ -19,7 +19,7 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/plusminus-software/plusminus-configs</url>
+        <url>https://github.com/plusminus-software/plusminus-configs.git</url>
     </scm>
 
     <developers>
