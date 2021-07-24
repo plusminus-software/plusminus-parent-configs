@@ -74,7 +74,7 @@
     <rule ref="category/java/codestyle.xml/DontImportJavaLang" />
     <rule ref="category/java/codestyle.xml/TooManyStaticImports">
         <properties>
-            <property name="violationSuppressRegex" value=".*Test\.java"/>
+            <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration['.*/test/.*']"/>
         </properties>
     </rule>
     <rule ref="category/java/codestyle.xml/UnnecessaryReturn" />
@@ -101,5 +101,9 @@
     <rule ref="category/java/design.xml/CyclomaticComplexity"/>
     <rule ref="category/java/design.xml/NPathComplexity"/>
 
-    <rule ref="category/java/documentation.xml/UncommentedEmptyMethodBody"/>
+    <rule ref="category/java/documentation.xml/UncommentedEmptyMethodBody">
+        <properties>
+            <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration['.*/test/.*']"/>
+        </properties>
+    </rule>
 </ruleset>
