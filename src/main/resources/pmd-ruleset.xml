@@ -23,11 +23,18 @@
     <rule ref="category/java/bestpractices.xml/UseAssertTrueInsteadOfAssertEquals"/>
     <rule ref="category/java/bestpractices.xml/UnusedFormalParameter"/>
     <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
-    <rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateField">
+        <properties>
+            <property name="violationSuppressXPath"
+                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Spy']" />
+        </properties>
+    </rule>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod">
         <properties>
             <property name="violationSuppressXPath"
                       value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='PostConstruct']" />
+            <property name="violationSuppressXPath"
+                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Delegate']" />
         </properties>
     </rule>
     <rule ref="category/java/bestpractices.xml/UnusedImports"/>
