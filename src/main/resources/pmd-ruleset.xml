@@ -32,9 +32,8 @@
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod">
         <properties>
             <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='PostConstruct']" />
-            <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Delegate']" />
+                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='PostConstruct']
+                           | //ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Delegate']" />
         </properties>
     </rule>
     <rule ref="category/java/bestpractices.xml/UnusedImports"/>
@@ -55,7 +54,11 @@
     <rule ref="category/java/errorprone.xml/UnnecessaryConversionTemporary" />
     <rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals" />
     <rule ref="category/java/errorprone.xml/UselessOperationOnImmutable" />
-    <rule ref="category/java/errorprone.xml/CloseResource"/>
+    <rule ref="category/java/errorprone.xml/CloseResource">
+        <properties>
+            <property name="violationSuppressXPath" value=".[typeIs('org.hibernate.internal.SessionFactoryImpl')]"/>
+        </properties>
+    </rule>
     <rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
     <rule ref="category/java/errorprone.xml/EmptyFinallyBlock"/>
     <rule ref="category/java/errorprone.xml/EmptyIfStmt"/>
