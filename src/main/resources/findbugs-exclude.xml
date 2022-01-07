@@ -21,6 +21,10 @@
         <Class name="~.*Test" />
     </Match>
     <Match>
+        <Bug pattern="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" />
+        <Class name="~.*Test" />
+    </Match>
+    <Match>
         <Bug pattern="ENTITY_LEAK" />
     </Match>
     <Match>
