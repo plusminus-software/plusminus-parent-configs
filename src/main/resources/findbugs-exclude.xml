@@ -25,6 +25,18 @@
         <Class name="~.*Test" />
     </Match>
     <Match>
+        <Bug pattern="XXE_XSLT_TRANSFORM_FACTORY" />
+        <Class name="~.*Test" />
+    </Match>
+    <Match>
+        <Bug pattern="XXE_DTD_TRANSFORM_FACTORY" />
+        <Class name="~.*Test" />
+    </Match>
+    <Match>
+        <Bug pattern="XXE_DOCUMENT" />
+        <Class name="~.*Test" />
+    </Match>
+    <Match>
         <Bug pattern="ENTITY_LEAK" />
     </Match>
     <Match>
