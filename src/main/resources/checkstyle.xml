@@ -289,6 +289,16 @@
         </module>
         <module name="NPathComplexity"/>
         <module name="JavaNCSS"/>
+        <module name="SuppressionXpathSingleFilter">
+            <property name="checks" value="HiddenField"/>
+            <property name="query"
+                      value="//METHOD_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Autowired']]//PARAMETER_DEF/IDENT"/>
+        </module>
+        <module name="SuppressionXpathSingleFilter">
+            <property name="checks" value="HiddenField"/>
+            <property name="query"
+                      value="//METHOD_DEF[./IDENT[@text='init']]//PARAMETER_DEF/IDENT"/>
+        </module>
     </module>
 
 
@@ -302,6 +312,7 @@
     <!--</module>-->
     <module name="SuppressWarningsFilter"/>
     <module name="SuppressionFilter">
-        <property name="file" value="${checkstyle.suppressions.file}"/>
+        <property name="file" value="${checkstyle.suppressions.file}"
+                  default="checkstyle-suppressions.xml"/>
     </module>
 </module>
