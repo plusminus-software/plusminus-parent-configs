@@ -26,7 +26,7 @@
     <rule ref="category/java/bestpractices.xml/UnusedPrivateField">
         <properties>
             <property name="violationSuppressXPath"
-                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Spy']" />
+                      value="//ClassOrInterfaceBodyDeclaration/Annotation/MarkerAnnotation/Name[@Image='Spy' or @Image='MockBean']" />
         </properties>
     </rule>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod">
